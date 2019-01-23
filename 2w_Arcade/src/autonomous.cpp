@@ -2,5 +2,5 @@
 #include "autonomouses.h"
 
 void autonomous() {
-  EightP_RED();
+  EightP_BLUE();
 }
