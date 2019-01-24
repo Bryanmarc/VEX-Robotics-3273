@@ -1,7 +1,7 @@
 #include "functions.h"
 
 void EightP(char side) {
-  if(side == 'R') {
+  if (side == 'R') {
     dt_move_forward(80);
     pros::delay(200);
     dt_move_forward();
@@ -82,7 +82,7 @@ void EightP(char side) {
     dt_move_backwards();
     pros::delay(350);
     dt_stop();
-} else(side == 'B') {
+} else if (side == 'B') {
     dt_move_forward(80);
     pros::delay(200);
     dt_move_forward();
@@ -174,15 +174,15 @@ void EightP(char side) {
     //Cap has been flipped
     dt_stop();
 
-}
+  }
 }
 
 void Test(char side) {
-  if(side == 'R') {
+  if (side == 'R') {
 
   }
 
-  else if(side == 'B') {
+  else if (side == 'B') {
 
   }
 }

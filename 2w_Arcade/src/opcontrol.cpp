@@ -7,30 +7,26 @@ void opcontrol() {
 	pros::Motor roller_mtr(3);
 	pros::Motor flywheel_mtr(4);
 	pros::Motor flywheel_mtr_2(5);
-  pros::ADIDigitalOut cap_knocker(1);
-
+  
 	int power;
 	int turn;
 	int flywheel;
-	int conveyor_up;
+  bool btn_a;
+	bool conveyor_up;
+  bool conveyor_down;
 	bool flipper_up;
 	bool flipper_down;
-	bool btn_a;
-	bool conveyor_down;
-  bool knock = HIGH;
-  bool cap_knock_up;
-  bool cap_knock_down;
 
 	while (true) {
 		btn_a = master.get_digital(DIGITAL_A);
 		flywheel = master.get_digital(DIGITAL_DOWN);
-		power = master.get_analog(ANALOG_RIGHT_Y);
 		conveyor_up = master.get_digital(DIGITAL_L1);
 		conveyor_down = master.get_digital(DIGITAL_L2);
-		turn = master.get_analog(ANALOG_RIGHT_X);
-    cap_knock_up = master.get_digital(DIGITAL_R1);
-		// Sets motors
 
+		turn = master.get_analog(ANALOG_RIGHT_X);
+    power = master.get_analog(ANALOG_RIGHT_Y);
+
+    // Sets motors
     if((abs(power) > 15) || (abs(turn) > 15)) {
 			left_mtr = -(power - turn);
 			right_mtr = power + turn;
@@ -55,10 +51,5 @@ void opcontrol() {
 			roller_mtr = 0;
 		}
 
-    if(cap_knock_up) {
-      cap_knocker.set_value(true);
-    } else {
-      cap_knocker.set_value(false);
-    }
   }
 }

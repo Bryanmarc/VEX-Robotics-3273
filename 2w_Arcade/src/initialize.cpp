@@ -1,6 +1,8 @@
 #include "main.h"
+#include "display/lvgl.h"
+#include "lcd/lcd.h"
 
-void on_center_button() {
+/*void on_center_button() {
 	static bool pressed = false;
 	pressed = !pressed;
 	if (pressed) {
@@ -8,7 +10,7 @@ void on_center_button() {
 	} else {
 		pros::lcd::clear_line(2);
 	}
-}
+}*/
 
 /**
  * Runs initialization code. This occurs as soon as the program is started.
@@ -17,11 +19,11 @@ void on_center_button() {
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
-	pros::lcd::initialize();
+	/*pros::lcd::initialize();
 	pros::lcd::set_text(1, "Hello PROS User!");
 
 	pros::lcd::register_btn1_cb(on_center_button);
-
+	*/
 
 }
 
@@ -41,4 +43,6 @@ void disabled() {}
  * This task will exit when the robot is enabled and autonomous or opcontrol
  * starts.
  */
-void competition_initialize() {}
+void competition_initialize() {
+	autonomous_selection();
+}
