@@ -6,8 +6,8 @@ void opcontrol() {
 	pros::Motor right_mtr(2);
 	pros::Motor roller_mtr(3);
 	pros::Motor flywheel_mtr(4);
-	pros::Motor flywheel_mtr_2(5);
-  
+	pros::Motor flywheel_mtr_2(9);
+
 	int power;
 	int turn;
 	int flywheel;
