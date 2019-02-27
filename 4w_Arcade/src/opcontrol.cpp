@@ -45,6 +45,12 @@ void opcontrol() {
 			back_left_mtr = (power + turn);
 			front_right_mtr = -(power - turn);
 			back_right_mtr = -(power - turn);
+
+			/*	front_left_mtr.move_velocity((400/127)*(power + turn));
+				back_left_mtr.move_velocity((400/127)*(power + turn));
+				front_right_mtr.move_velocity((400/127)*(-(power - turn)));
+				back_right_mtr.move_velocity((400/127)*(-(power - turn)));
+			*/
 		} else {
 			front_left_mtr = 0;
 			back_left_mtr = 0;

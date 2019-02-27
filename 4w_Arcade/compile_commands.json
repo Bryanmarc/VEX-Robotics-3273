@@ -25,11 +25,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/opcontrol.cpp.o",
-            "src/opcontrol.cpp"
+            "bin/autonomous.cpp.o",
+            "src/autonomous.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/opcontrol.cpp"
+        "file": "src/autonomous.cpp"
     },
     {
         "arguments": [
@@ -85,11 +85,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/autonomous.cpp.o",
-            "src/autonomous.cpp"
+            "bin/initialize.cpp.o",
+            "src/initialize.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/autonomous.cpp"
+        "file": "src/initialize.cpp"
     },
     {
         "arguments": [
@@ -117,10 +117,10 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/initialize.cpp.o",
-            "src/initialize.cpp"
+            "bin/opcontrol.cpp.o",
+            "src/opcontrol.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/initialize.cpp"
+        "file": "src/opcontrol.cpp"
     }
 ]
