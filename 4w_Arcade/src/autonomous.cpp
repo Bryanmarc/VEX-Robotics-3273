@@ -3,5 +3,5 @@
 #include "autonomous/autonomi.h"
 
 void autonomous() {
-  Front_Six_P_Red();
+  Front_Eight_P_Red();
 }
