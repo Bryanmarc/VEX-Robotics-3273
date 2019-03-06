@@ -1,4 +1,3 @@
-#include "main.h"
 #include "autonomous/lcd_selection.h"
 #include "autonomous/autonomi.h"
 #include "globals.hpp"
