@@ -1,8 +1,6 @@
-#include "../variables.h"
-
 void auton_selection() {
-  
-  switch (autonomous_selection) {
+
+  switch (auton_selection) {
     case 1:
       switch (side_selection) {
         case 1:

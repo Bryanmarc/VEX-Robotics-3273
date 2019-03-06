@@ -28,5 +28,5 @@ void disabled() {}
  * starts.
  */
 void competition_initialize() {
-	autonomous_selection();
+	//autonomous_selection();
 }

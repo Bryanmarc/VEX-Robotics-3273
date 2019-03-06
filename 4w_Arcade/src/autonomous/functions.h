@@ -9,100 +9,6 @@ pros::Motor flywheel_mtr_two(8);
 pros::Motor index_mtr(18);
 pros::Motor conveyor_mtr(15);
 
-/*
-int fade_right_adjustment = 0;
-int fade_left_adjustment = 0;
-
-void dt_move_forward(int power = 127) {
-  back_left_mtr = power - fade_right_adjustment;
-  front_left_mtr = power - fade_right_adjustment;
-  back_right_mtr = -power + fade_left_adjustment;
-  front_right_mtr = -power + fade_left_adjustment;
-}
-
-void dt_move_backwards(int power = 127) {
-  back_left_mtr = -power + fade_right_adjustment;
-  front_left_mtr = -power + fade_right_adjustment;
-  back_right_mtr = power - fade_left_adjustment;
-  front_right_mtr = power - fade_left_adjustment;
-}
-
-void dt_stop() {
-  back_left_mtr = 0;
-  front_left_mtr = 0;
-  back_right_mtr = 0;
-  front_right_mtr = 0;
-}
-
-void dt_turn_right(int power = 127) {
-  back_left_mtr = power;
-  front_left_mtr = power;
-  back_right_mtr = power;
-  front_right_mtr = power;
-}
-
-void dt_turn_left(int power = 127) {
-  back_left_mtr = -power;
-  front_left_mtr = -power;
-  back_right_mtr = -power;
-  front_right_mtr = -power;
-}
-
-void convey(int power = 127) {
-  conveyor_mtr = power;
-}
-
-void flip_caps(int power = 127) {
-  conveyor_mtr = -power;
-}
-
-void convey_stop() {
-  conveyor_mtr = 0;
-}
-
-void index_up(int power = 127) {
-  index_mtr = power;
-}
-
-void index_down(int power = 127) {
-  index_mtr = -power;
-}
-
-void index_stop() {
-  index_mtr = 0;
-}
-
-void full_convey(int power = 127) {
-  index_mtr = power;
-  conveyor_mtr = power;
-}
-
-void full_convey_reverse(int power = 127) {
-  index_mtr = -power;
-  conveyor_mtr = -power;
-}
-
-void full_convey_stop() {
-  index_mtr = 0;
-  conveyor_mtr = 0;
-}
-
-void flywheel() {
-  flywheel_mtr_one = 127;
-  flywheel_mtr_two = -127;
-}
-
-void flywheel_backwards() {
-  flywheel_mtr_one = -127;
-  flywheel_mtr_two = 127;
-}
-
-void flywheel_stop() {
-  flywheel_mtr_one = 0;
-  flywheel_mtr_two = 0;
-}
-*/
-
 void v_forward(int rpm = 200) {
   back_left_mtr.move_velocity(rpm);
   front_left_mtr.move_velocity(rpm);
@@ -110,14 +16,14 @@ void v_forward(int rpm = 200) {
   front_right_mtr.move_velocity(-rpm);
 }
 
-void dt_move_forward(int rpm = 127) {
+void dt_move_forward(int rpm = 200) {
   back_left_mtr.move_velocity(rpm);
   front_left_mtr.move_velocity(rpm);
   back_right_mtr.move_velocity(-rpm);
   front_right_mtr.move_velocity(-rpm);
 }
 
-void dt_move_backwards(int rpm = 127) {
+void dt_move_backwards(int rpm = 200) {
   back_left_mtr.move_velocity(-rpm);
   front_left_mtr.move_velocity(-rpm);
   back_right_mtr.move_velocity(rpm);
@@ -131,14 +37,14 @@ void dt_stop() {
   front_right_mtr = 0;
 }
 
-void dt_turn_right(int rpm = 127) {
+void dt_turn_right(int rpm = 200) {
   back_left_mtr.move_velocity(rpm);
   front_left_mtr.move_velocity(rpm);
   back_right_mtr.move_velocity(rpm);
   front_right_mtr.move_velocity(rpm);
 }
 
-void dt_turn_left(int rpm = 127) {
+void dt_turn_left(int rpm = 200) {
   back_left_mtr.move_velocity(-rpm);
   front_left_mtr.move_velocity(-rpm);
   back_right_mtr.move_velocity(-rpm);
@@ -197,4 +103,9 @@ void flywheel_backwards() {
 void flywheel_stop() {
   flywheel_mtr_one = 0;
   flywheel_mtr_two = 0;
+}
+
+void slow_flywheel() {
+  flywheel_mtr_one = 80;
+  flywheel_mtr_two = -80;
 }

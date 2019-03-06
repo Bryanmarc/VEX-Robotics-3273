@@ -1,18 +1,18 @@
 #include "main.h"
-pros::Motor dt_left(1);
-pros::Motor dt_right(2);
+pros::Motor dt_left(2);
+pros::Motor dt_right(8);
 pros::Motor conveyor(3);
 pros::Motor flywheel_mtr(4);
-pros::Motor flywheel_mtr_2(5);
+pros::Motor flywheel_mtr_2(9);
 
 void dt_move_forward(int power = 127) {
-  dt_right = power;
-  dt_left = -power;
+  dt_right = -power;
+  dt_left = power;
 }
 
 void dt_move_backwards(int power = 127) {
-  dt_right = -power;
-  dt_left = power;
+  dt_right = power;
+  dt_left = -power;
 }
 
 void dt_turn_left(int power = 127) {

@@ -1,4 +1,13 @@
- #include "main.h"
+#include "main.h"
+#include <iostream>
+#include <future>
+
+/*int i = 0;
+void nyan_cat() {
+  pros::lcd::print(1, "" << i);
+  pros::delay(333);
+  i++;
+}*/
 
 void opcontrol() {
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
@@ -16,12 +25,18 @@ void opcontrol() {
   bool conveyor_down;
 	bool flipper_up;
 	bool flipper_down;
+	bool flywheel_backwards;
 
 	while (true) {
+
+    /*std::future<void> disp_nyan(std::async(nyan_cat));
+    disp_nyan();*/
+
 		btn_a = master.get_digital(DIGITAL_A);
 		flywheel = master.get_digital(DIGITAL_DOWN);
 		conveyor_up = master.get_digital(DIGITAL_L1);
 		conveyor_down = master.get_digital(DIGITAL_L2);
+		flywheel_backwards = master.get_digital(DIGITAL_UP);
 
 		turn = master.get_analog(ANALOG_RIGHT_X);
     power = master.get_analog(ANALOG_RIGHT_Y);
@@ -38,6 +53,9 @@ void opcontrol() {
 		if(flywheel) {
 			flywheel_mtr = 127;
 			flywheel_mtr_2 = -127;
+		} else if(flywheel_backwards) {
+			flywheel_mtr = -127;
+			flywheel_mtr_2 = 127;
 		} else {
 			flywheel_mtr = 0;
 			flywheel_mtr_2 = 0;

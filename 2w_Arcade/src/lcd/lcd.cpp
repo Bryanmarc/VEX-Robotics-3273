@@ -1,8 +1,9 @@
 #include "display/lvgl.h"
 #include "lcd.h"
 
-extern int auton;
-extern int side;
+int side = 0;
+int auton = 0;
+
 // INIT LCD AKA MAIN OF LCD SELECTION
 void autonomous_selection() {
 
@@ -25,4 +26,11 @@ void autonomous_selection() {
 
   lv_btnm_set_toggle(btnm1, true, auton);
   lv_btnm_set_toggle(btnm2, true, side);
+}
+
+int get_auton() {
+  return auton;
+}
+int get_side() {
+  return side;
 }

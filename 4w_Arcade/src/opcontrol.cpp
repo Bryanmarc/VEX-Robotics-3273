@@ -10,6 +10,7 @@ void opcontrol() {
 	pros::Motor flywheel_mtr_two(8);
 	pros::Motor index_mtr(18);
 	pros::Motor conveyor_mtr(15);
+  // Sorry the ports are disorganized. This was to fix the static discharging.
 
 	int power;
 	int turn;
@@ -20,14 +21,10 @@ void opcontrol() {
 	bool indexer_up;
 	bool indexer_down;
 
-	// Ya'll ready know
-	/*lv_init();
-	lv_scr_act();
-
-	LV_IMG_DECLARE(bbb_arr);
-	lv_obj_t * bbb = lv_img_create(lv_scr_act(), NULL);
-	lv_img_set_src(bbb, &bbb_arr);*/
-
+	LV_IMG_DECLARE(bbb);
+	lv_obj_t * bbb_obj = lv_img_create(lv_scr_act(), NULL);
+	lv_img_set_src(bbb_obj, &bbb);
+	lv_obj_set_pos(bbb_obj, 10, 10);
 
 	while (true) {
 
