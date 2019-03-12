@@ -24,7 +24,7 @@ static lv_res_t side_btnm_action(lv_obj_t * btnm, const char *txt) {
   else if( txt == "Red") {side_sel = 2;}
 
   side_sel = atoi(txt);
-  std::string text = "Side: " + std::to_string(auton_sel);
+  std::string text = "Side: " + std::to_string(side_sel);
   lv_obj_t * title = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(title, txt);
   return LV_RES_OK;
@@ -49,6 +49,7 @@ static void create_tab1(lv_obj_t * parent) {
 }
 
 static void create_tab2(lv_obj_t * parent) {
+
     static const char * side_select[] = {"Blue", "Red", ""};
 
     lv_obj_t * btnm2 = lv_btnm_create(parent, NULL);

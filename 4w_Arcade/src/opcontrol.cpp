@@ -2,6 +2,8 @@
 #include "globals.hpp"
 
 void opcontrol() {
+
+
 	int power;
 	int turn;
 	bool flywheel;

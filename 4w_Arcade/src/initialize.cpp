@@ -1,8 +1,8 @@
 #include "main.h"
 #include "autonomous/lcd_selection.h"
 
-extern int auton_sel;
 extern int side_sel;
+extern int auton_sel;
 
 void initialize() {
 }
