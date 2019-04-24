@@ -8,7 +8,6 @@ extern int auton_sel;
 extern int side_sel;
 
 static lv_res_t point_btnm_action(lv_obj_t * btnm, const char *txt) {
-
   if( txt == "Front") {auton_sel = 1;}
   else if( txt == "Back") {auton_sel = 2;}
   else if( txt == "Skills") { auton_sel = 3;}
@@ -23,7 +22,6 @@ static lv_res_t side_btnm_action(lv_obj_t * btnm, const char *txt) {
   if( txt == "Blue") {side_sel = 1;}
   else if( txt == "Red") {side_sel = 2;}
 
-  side_sel = atoi(txt);
   std::string text = "Side: " + std::to_string(side_sel);
   lv_obj_t * title = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(title, txt);

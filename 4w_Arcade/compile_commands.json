@@ -25,43 +25,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/opcontrol.cpp.o",
-            "src/opcontrol.cpp"
+            "bin/globals.cpp.o",
+            "src/globals.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/opcontrol.cpp"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1/backward",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/include",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/include-fixed",
-            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include",
-            "-iquote./include",
-            "-iquote./include/./",
-            "-mcpu=cortex-a9",
-            "-mfpu=neon-fp16",
-            "-mfloat-abi=softfp",
-            "-D_POSIX_THREADS",
-            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
-            "-Os",
-            "-funwind-tables",
-            "-ffunction-sections",
-            "-fdata-sections",
-            "-fdiagnostics-color",
-            "--std=gnu++17",
-            "-o",
-            "bin/autonomous.cpp.o",
-            "src/autonomous.cpp"
-        ],
-        "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/autonomous.cpp"
+        "file": "src/globals.cpp"
     },
     {
         "arguments": [
@@ -121,11 +89,11 @@
             "-fdiagnostics-color",
             "--std=gnu++17",
             "-o",
-            "bin/globals.cpp.o",
-            "src/globals.cpp"
+            "bin/autonomous.cpp.o",
+            "src/autonomous.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/globals.cpp"
+        "file": "src/autonomous.cpp"
     },
     {
         "arguments": [
@@ -133,6 +101,9 @@
             "-c",
             "-target",
             "armv7ar-none-none-eabi",
+            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1",
+            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
+            "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include/c++/7.3.1/backward",
             "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/include",
             "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/include-fixed",
             "-isystem/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include",
@@ -144,16 +115,17 @@
             "-D_POSIX_THREADS",
             "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
             "-Os",
+            "-funwind-tables",
             "-ffunction-sections",
             "-fdata-sections",
             "-fdiagnostics-color",
-            "--std=gnu11",
+            "--std=gnu++17",
             "-o",
-            "bin/bbb.c.o",
-            "src/bbb.c"
+            "bin/opcontrol.cpp.o",
+            "src/opcontrol.cpp"
         ],
         "directory": "/home/bryanmarc/Desktop/Robotics/Code/3273B/Team-B/4w_Arcade",
-        "file": "src/bbb.c"
+        "file": "src/opcontrol.cpp"
     },
     {
         "arguments": [

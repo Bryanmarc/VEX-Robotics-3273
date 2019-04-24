@@ -7,7 +7,7 @@
 extern int auton_sel;
 extern int side_sel;
 
-void autonomous() {
+void autonomous() {/*
   std::string a_text = "Auton: " + std::to_string(auton_sel);
   lv_obj_t * a_title = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(a_title, a_text.c_str());
@@ -54,5 +54,6 @@ void autonomous() {
     else if (side_sel == 0) {
       Front_Eight_P_Blue();
     }
-  }
+  }*/
+  Back_Nine_P_Blue();
 }

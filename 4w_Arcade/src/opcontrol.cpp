@@ -3,7 +3,6 @@
 
 void opcontrol() {
 
-
 	int power;
 	int turn;
 	bool flywheel;
@@ -13,10 +12,11 @@ void opcontrol() {
 	bool indexer_up;
 	bool indexer_down;
 
+	/*
 	LV_IMG_DECLARE(bbb);
 	lv_obj_t * bbb_obj = lv_img_create(lv_scr_act(), NULL);
 	lv_img_set_src(bbb_obj, &bbb);
-	lv_obj_set_pos(bbb_obj, 10, 10);
+	lv_obj_set_pos(bbb_obj, 10, 10);*/
 
 	while (true) {
 
