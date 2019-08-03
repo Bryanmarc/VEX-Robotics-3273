@@ -1,7 +1,5 @@
-# Team-B
-This is the repository for Team 3273B's VEX Robotics Competition Code. We are currently using Pros & VEX v5.
-
-You can download Pros, which is developed by students from Purdue University's Purdue ACM SigBots Team, [here](https://pros.cs.purdue.edu/)
+# Team 3273 Programming Resource
+Hey there, hopefully this guide will help you learn the basics behind programming for VEX Robotics. I created this guide to help those willing to program even while I'm not there to help Team 3273 in person. I will do my best to help you understand everything quickly. This is a guide and a resource. Don't be scared to come back to this if you need some help.
 
 <a name="contents"></a>
 ## Contents
